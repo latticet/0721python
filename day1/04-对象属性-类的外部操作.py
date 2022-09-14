@@ -29,3 +29,8 @@ print(p1.name, p1.age)
 # 语法（通用语法）：del p1.name
 del p1.name
 print(p1.name)
+
+
+# pycharm快捷键
+# 删除一行  Ctrl del
+# 单行注释  Ctrl /
