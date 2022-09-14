@@ -32,5 +32,5 @@ print(p1.name)
 
 
 # pycharm快捷键
-# 删除一行  Ctrl del
+# 删除一行  shift del
 # 单行注释  Ctrl /
