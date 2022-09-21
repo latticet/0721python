@@ -3,21 +3,39 @@
 2. 只有函数调用的时候，函数体里面的内容才会执行
 3. 读一个函数先看这个函数的返回值，在哪儿调用在哪儿返回
 """
-# 定义
+"""
+1. 函数就是一个带名字的代码块
+2. 可以当做普通数据进行赋值操作
+3. 可以当做参数传入
+4. 可以当做返回值返回
+"""
 def fn1():
-    for i in range(100):
-        print(i)
+    print('fn1')
 
-    print(100)
+demo = fn1
 
+# demo()
+# fn1()
+
+# 当参数使用
+def run1(fn):   # fn = fn1
+    fn()
+
+# 当返回值使用
+def run2():
     def fn2():
         print('fn2')
+    return fn2
 
-    def fn3():
-        for i in range(1000):
-            print(i)
 
-# 调用
-result = fn1()
-print(result)
+if __name__ == '__main__':
+    # run1(fn1)
+    fn = run2()
+    fn()
+
+
+
+
+
+
 
