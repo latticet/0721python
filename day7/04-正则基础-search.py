@@ -1,6 +1,7 @@
 import re
 
 # 匹配到返回对象
+# 语法： re.search(正则表达式， 匹配的字符串)
 re_obj1 = re.search('hello', 'jhellofdslakjflkdshellojalkfds')
 re_obj2 = re.search('good', 'applegood111goodxxx')
 # 匹配到对象的情况下，对象上有一个方法：group(),这个方法返回匹配到的字符串
