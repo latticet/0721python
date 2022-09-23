@@ -60,6 +60,7 @@ print(re.search('he\s', 'he\t'))
 """
 
 # \S	匹配非空白
+
 # \w	匹配非特殊字符，即a-z、A-Z、0-9、_、汉字 等价：[0-9a-zA-Z_\u4e00-\u9fa5]
 print(re.search('he\w', 'he1'))
 print(re.search('he\w', 'hea'))
