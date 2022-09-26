@@ -20,6 +20,12 @@ SELECT class_id, GROUP_CONCAT(stu_name) FROM student GROUP BY class_id;
 -- 查询平均年龄大于30的班级
 SELECT class_id, AVG(stu_age) FROM student GROUP BY class_id HAVING AVG(stu_age) > 30;
 
+-- 排除stu_id为1和3的学生，查询每个班级的学生姓名
+SELECT class_id, GROUP_CONCAT(stu_name) FROM student
+WHERE stu_id NOT IN (1, 3)
+GROUP BY class_id;
+
+
 
 
 
