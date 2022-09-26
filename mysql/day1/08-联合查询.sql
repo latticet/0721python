@@ -9,8 +9,8 @@ SELECT * FROM student WHERE stu_age > 18
 UNION ALL
 SELECT * FROM student WHERE stu_age < 18;
 
--- 查询student表的stu_no和stuname
--- 查询class表的classname和classroom
+-- 查询student表的stu_no和stu_name
+-- 查询class表的class_name和class_room
 SELECT stu_no, stu_name FROM student
 UNION ALL
 SELECT class_name, class_room FROM class;
