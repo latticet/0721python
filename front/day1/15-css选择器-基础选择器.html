@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        ● 基础选择器[掌握] 
+        ○ 标签选择器
+        ○ id选择器
+        ○ class选择器
+        ○ 通用 *
+        */
+        /* 标签选择器 */
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;   /* 1px宽的蓝色的直线边框*/
+            background-color: orange;
+        }
+
+        /* id选择器 */
+        #span1{
+            color:yellowgreen;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* class选择器 */
+        .red{
+            color: red;
+            font-size: 30px;
+        }
+        
+        *{
+            color:purple;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <!-- 前端页面编写规则：不出现同名的id -->
+    <span id="span1">span1</span>
+
+    <hr>
+    <p class="red">段落</p>
+    <span class="red">span</span>
+
+    <hr>
+    <b>加粗字体</b>
+</body>
+</html>

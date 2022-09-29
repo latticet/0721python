@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        ●  复合选择器 
+        ○ 后代选择器   E1  E2
+        ○ 子元素选择器 E1 > E2
+        ○ 并集选择器   E1, E2, E3, ... 
+        */
+
+        /*
+        选择器（打分）：
+        标签选择器：1
+        类选择器：  10
+        id选择器：  100
+        */
+
+        /* 并集选择器   E1, E2, E3, ... */
+        span, #div1{
+            color: gray;
+        }
+
+        /* 后代选择器   E1  E2 */
+        div span{
+            color:red
+        }
+        /* 子元素选择器 E1 > E2 */
+        div > span{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <span>span标签1</span>
+            <p>
+                <p><span>span标签3</span></p>
+            </p>
+        </p>
+        <span>span标签2</span>
+    </div>
+
+    <span>span4</span>
+    <div id="div1">div盒子</div>
+</body>
+</html>
