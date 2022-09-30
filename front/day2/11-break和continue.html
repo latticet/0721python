@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break和continue</title>
+</head>
+<body>
+    <script>
+        // break: 退出整个循环
+        for(var i=1;i<6;i++){
+            if(i==3){
+                console.log('吃饱了，不吃了')
+                break
+            }
+            console.log('吃第' + i + '个苹果')
+                
+        }
+        // continue: 跳过本次循环
+        for(var i=1;i<6;i++){
+            if(i==3){
+                console.log('跳过第三个')
+                continue
+            }
+            console.log('吃第' + i + '个苹果')      
+        }
+
+    </script>
+</body>
+</html>
