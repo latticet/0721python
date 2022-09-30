@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型</title>
+</head>
+<body>
+    <script>
+        // 查看数据类型： typeof(数据)
+        // 基本数据类型
+        // number
+        console.log(typeof(100))
+        console.log(typeof(11.1))
+        // string
+        str1 = 'hello'
+        str2 = "wrold"
+        console.log(typeof(str1))
+        console.log(typeof(str2))
+        // boolean
+        console.log(typeof(true))
+        console.log(typeof(false))
+        // undefind  未定义
+        var aa
+        var bb = undefined
+        console.log(typeof(aa))
+        console.log(typeof(bb))
+        // null 空对象
+        var obj = null
+        console.log(typeof(obj))
+
+        // 引用数据类型
+        var arr1 = []
+        console.log(typeof(arr1))
+        var obj1 = {}
+        console.log(typeof(obj1))
+        function fn1(){
+            // 函数体
+        }
+        console.log(typeof(fn1))
+    </script>
+</body>
+</html>

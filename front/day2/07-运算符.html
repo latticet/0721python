@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运算符</title>
+</head>
+<body>
+    <script>
+        // ++
+        // javascript：a++
+        // python    : a = a + 1
+        a = 100
+        a++
+        console.log(a)
+
+
+        // ==：值相等  ===：全相等，值和类型都相同
+        m = 100
+        n = '100'
+        console.log(m == n)
+        console.log(m === n)
+
+        console.log('==============')
+        // !==： 不全等于
+        m = 100
+        n = '100'
+        console.log(m != n)
+        console.log(m !== n)
+
+        // 三元运算符：
+        // python语法： 条件成立执行的表达式 if 条件 else 条件不成立执行的表达式
+        // js语法：     条件 ? 条件成立执行的表达式 : 条件不成立执行的表达式
+
+        console.log('==============')
+        x = 100
+        y = 200
+        if(x > y){
+            console.log(x)
+        }else{
+            console.log(y)
+        }
+
+        // 三元
+        console.log(x > y ? x : y)
+    </script>
+</body>
+</html>
