@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+</head>
+<body>
+    <script>
+        // 定义
+        /*
+        function 函数名(){
+            函数体
+        }
+        */
+        // 调用
+        /*
+        函数名()
+        */
+        // 参数
+        /*
+        必填参数，  默认参数
+        function 函数名(a, b=100){
+            函数体
+        }
+        */
+        // 返回
+        /*
+        只能返回一个值
+        function 函数名(a, b=100){
+            函数体
+            return
+        }
+        */
+        // 定义
+        function fn1(a, b=100){
+            console.log(a)
+            console.log(b)
+        }
+        // 调用
+        // 位置传参
+        fn1(10, 200)
+        // 可以这样写，但是没有关键字参数
+        // fn1(b=3, a=10)
+
+        // 不定长参数
+        function fn2(){
+            console.log(arguments)
+        }
+
+        fn2(1, 2, 3, 3, 'a', 'fkdsajf', 'fasdkljfklds')
+
+        // 返回值
+        function fn3(){
+            return 1 + 1
+        }
+
+        function fn4(){
+            return undefined
+        }
+        console.log(fn3())
+
+        console.log(fn4())
+
+
+        // 匿名函数
+        var fn5 = function(){
+            console.log('fn5')
+        }
+        fn5()
+
+        // 匿名函数自调用
+        !function(){
+            console.log('fn6')
+        }()
+
+        +function(){
+            console.log('fn7')
+        }()
+
+        *function(){
+            console.log('fn8')
+        }()
+
+        
+        -function(){
+            console.log('fn9')
+        }()
+
+        // 需求： 封装一个99乘法表的函数
+    </script>
+</body>
+</html>
