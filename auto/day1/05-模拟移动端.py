@@ -4,6 +4,7 @@ from selenium import webdriver
 # TODO 准备模拟移动端需要的配置信息
 # 创建配置对象
 options = webdriver.ChromeOptions()
+# 添加配置项
 options.add_experimental_option('mobileEmulation', {'deviceName': 'iPhone SE'})
 
 # 打开浏览器
