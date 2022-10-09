@@ -3,6 +3,9 @@ import time
 # 1、打开Chrome，打开百度首页
 # TODO 得到的是驱动对象
 driver = webdriver.Chrome()
+# 浏览器最大化
+driver.maximize_window()
+
 # 请求百度首页
 # TODO driver.get(网址)  请求目标网址
 driver.get('https://www.baidu.com')
