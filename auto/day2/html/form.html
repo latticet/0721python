@@ -16,7 +16,9 @@
     <form action="https://www.baidu.com">
         <!-- input[type='表单类型'] -->
         <!-- text	普通文本框	 -->
-        姓名：<input type="text"><br/>
+        姓名1：<input type="text"><br/>
+
+        姓名2：<input type="text" value="hello"><br/>
 
         <!-- password	密码框	内容显示为*号 -->
         密码：<input type="password" ><br/>
@@ -24,7 +26,7 @@
         <!-- radio	单选	一组单选必需name相同 -->
         <!-- 单选按钮和多选按钮默认选中，添加一个checked的属性就可以了 -->
         性别：男<input type="radio" name="gender"> 女<input type="radio" name="gender" checked><br>
-        
+
         <!-- checkbox	多选	一组多选必需name相同 -->
         爱好：<input type="checkbox">下课刻苦练习 <input type="checkbox" checked="checked">上课认真听讲<br>
 
@@ -32,8 +34,8 @@
         头像：<input type="file"><br/>
 
         <!-- hidden	隐藏域	不显示控件；这个在以后做数据修改时会有用 -->
-        <input type="hidden" value="你看不到我"> 
-        
+        <input type="hidden" value="你看不到我">
+
         <!-- 按钮类型表单域 -->
         <!-- image	图片按钮	必需配合src属性来展示  -->
         <input type="image" src="./images/button.jpeg" width="60"><br/>
@@ -61,8 +63,11 @@
 
 
         <!-- textarea: 多行文本 -->
-        介绍：
-        <textarea  cols="30" rows="10"></textarea>
+        介绍1：
+        <textarea  cols="30" rows="10">hello selenium</textarea>
+
+        介绍2：
+        <textarea  cols="40" rows="10">hello unittest</textarea>
     </form>
 </body>
 </html>
