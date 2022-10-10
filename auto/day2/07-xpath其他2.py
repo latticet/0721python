@@ -22,7 +22,12 @@ elements_p = driver.find_elements_by_xpath('//div[@id]/following-sibling::p')
 for element_p in elements_p:
     print(element_p.get_attribute('outerHTML'))
 
+print('==' * 20)
+
 # TODO 选择当前元素之前的同级元素 //A/preceding-sibling::B
+elements_p2 = driver.find_elements_by_xpath('//div[@id]/preceding-sibling::p')
+for element_p in elements_p2:
+    print(element_p.get_attribute('outerHTML'))
 
 # 关闭浏览器
 driver.quit()
