@@ -6,6 +6,8 @@ Base:
     元素定位
     请求目标网址
 """
+import time
+
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
@@ -49,7 +51,13 @@ class Base:
             return None
 
     def find_elements(self, locator, timeout=5, poll_frequency=0.5):
-        """定位多个元素"""
+        """
+        定位多个元素
+        :param locator: 定位器
+        :param timeout: 超时时间
+        :param poll_frequency: 间隔时间
+        :return: WebElement对象|None
+        """
         try:
             return WebDriverWait(self.driver, timeout, poll_frequency) \
                 .until(EC.presence_of_all_elements_located(locator), message='元素定位失败')
@@ -57,10 +65,50 @@ class Base:
             print(e)
             return []
 
+    def click(self, locator):
+        """点击操作"""
+        element = self.find_element(locator)
+        if element:
+            element.click()
+
+    def send_keys(self, locator, content):
+        """
+        输入框输入内容
+        :param locator: 定位器
+        :param content: 输入内容
+        :return:
+        """
+        element = self.find_element(locator)
+        if element:
+            element.send_keys(content)
+
+    def get_text(self, locator):
+        element = self.find_element(locator)
+        if element:
+            return element.text
+
+    def get_attribute(self, locator, name='outerHTML'):
+        """
+        获取标签属性值
+        :param locator: 定位器
+        :param name: 属性名
+        :return:
+        """
+        element = self.find_element(locator)
+        if element:
+            return element.get_attribute(name)
+
+    def quit(self, seconds=0):
+        time.sleep(seconds)
+        self.driver.quit()
+
 
 if __name__ == '__main__':
     driver = get_driver()
     base = Base(driver)
     base.get('https://www.baidu.com')
     # print(base.find_element((By.ID, 'su'), timeout=1))
-    print(len(base.find_elements((By.TAG_NAME, 'input'), timeout=1)))
+    # print(len(base.find_elements((By.TAG_NAME, 'input'), timeout=1)))
+    # print(base.get_text((By.LINK_TEXT, '新闻')))
+    # print(base.get_attribute((By.LINK_TEXT, '新闻')))
+    print(base.get_attribute((By.LINK_TEXT, '新闻'), 'target'))
