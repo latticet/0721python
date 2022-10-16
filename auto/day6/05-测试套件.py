@@ -21,14 +21,14 @@ if __name__ == '__main__':
     # TODO 创建测试套件
     suite = unittest.TestSuite()
 
-    # 单个收集测试用例方法
+    # suite.addTest：单个收集测试用例方法
     """
     suite.addTest(Demo1TestCase('test_2'))
     suite.addTest(Demo1TestCase('test_1'))
     suite.addTest(Demo2TestCase('test_b'))
     """
 
-    # 批量收集测试用例方法
+    # suite。addTests：批量收集测试用例方法
     tests = [
         Demo1TestCase('test_2'),
         Demo1TestCase('test_1'),
