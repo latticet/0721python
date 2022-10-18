@@ -28,6 +28,8 @@ class LoginTestCase(unittest.TestCase):
     def test_01_login(self, userinfo):
         # TODO 操作流程'
         expect_username = userinfo['username']
+        print(userinfo)
+
         # 输入用户名
         self.login.input_username(expect_username)
         # 输入密 码
