@@ -28,8 +28,6 @@ class LoginTestCase(unittest.TestCase):
     def test_login(self, userinfo):
         # TODO 操作流程'
         expect_username = userinfo['username']
-        print(userinfo)
-
         # 输入用户名
         self.login.input_username(expect_username)
         # 输入密 码
@@ -41,7 +39,10 @@ class LoginTestCase(unittest.TestCase):
         # 预期 和 实际结果的比对
         # 定位实际结果
         actual_username = self.index.font_username_text()
-        self.assertEqual(expect_username, actual_username, msg=userinfo['title'])
+        if userinfo['title'] == 'ok':
+            self.assertEqual(expect_username, actual_username, msg=userinfo['title'])
+        else:
+            self.assertNotEqual(expect_username, actual_username, msg=userinfo['title'])
 
     def tearDown(self) -> None:
         self.index.a_logout()

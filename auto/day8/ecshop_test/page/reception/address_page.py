@@ -67,8 +67,14 @@ class AddressPage(Base):
         """输入收货人姓名"""
         self.send_keys(self.address_locator(index)['consignee_loc'], name)
 
+    def input_address(self, address, index='last()'):
+        self.send_keys(self.address_locator(index)['address_loc'], address)
+
     def delete_address(self):
         self.click(self.address_locator("1")['delete_address_loc'])
+
+    def input_insert_address(self, index='last()'):
+        self.click(self.address_locator(index)['insert_address_loc'])
 
     def a_user_center(self):
         """进入用户中心"""
@@ -83,3 +89,17 @@ if __name__ == '__main__':
     login = LoginPage(driver)
     login.get(login.login_url)
     login.member_login()
+
+    address = AddressPage(driver)
+    # 进入用户中心
+    address.a_user_center()
+    # 进入收获地址
+    address.a_address()
+
+    # 输入用户名
+    address.input_consignee('fine1')
+    address.input_address('成都天府新区')
+    address.input_insert_address()
+
+
+
